@@ -25,7 +25,7 @@ module "eks" {
     one = {
       name = var.node_group_name
 
-      instance_types = ["t3.small"]
+      instance_types = [var.instance_type]
 
       min_size     = var.min_size
       max_size     = var.max_size

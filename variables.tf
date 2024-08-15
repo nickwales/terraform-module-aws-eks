@@ -26,4 +26,8 @@ variable "min_size" {
 
 variable "max_size" {
   default = 5
-} 
+}
+
+variable "instance_type" {
+  default = "t3.small"
+}
