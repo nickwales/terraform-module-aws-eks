@@ -5,10 +5,13 @@ module "eks" {
   cluster_name    = var.name
   cluster_version = "1.24"
 
-  cluster_endpoint_public_access = true
+  cluster_endpoint_public_access = var.cluster_endpoint_public_access
+    cluster_endpoint_private_access = var.cluster_endpoint_private_access
 
   vpc_id     = var.vpc_id
   subnet_ids = var.private_subnets
+
+
 
   eks_managed_node_group_defaults = {
     ami_type = "AL2_x86_64"

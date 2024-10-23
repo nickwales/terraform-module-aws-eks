@@ -31,3 +31,11 @@ variable "max_size" {
 variable "instance_type" {
   default = "t3.small"
 }
+
+variable "cluster_endpoint_private_access" {
+  default = false
+}
+
+variable "cluster_endpoint_public_access" {
+  default = true
+}
