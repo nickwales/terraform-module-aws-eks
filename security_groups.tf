@@ -14,7 +14,7 @@ resource "aws_security_group" "node_group_one" {
 
   tags = {
     Name = "nwales"
-  }  
+  }
 }
 
 resource "aws_security_group" "node_group_two" {
@@ -32,5 +32,5 @@ resource "aws_security_group" "node_group_two" {
   }
   tags = {
     Name = "nwales"
-  }   
+  }
 }
