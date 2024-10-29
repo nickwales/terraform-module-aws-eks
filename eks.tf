@@ -11,7 +11,7 @@ module "eks" {
   vpc_id     = var.vpc_id
   subnet_ids = var.private_subnets
 
-
+  iam_role_additional_policies = [aws_iam_policy.lambda_invoke.arn]
 
   eks_managed_node_group_defaults = {
     ami_type = "AL2_x86_64"
@@ -39,9 +39,7 @@ module "eks" {
       vpc_security_group_ids = [
         aws_security_group.node_group_one.id
       ]
-      iam_role_additional_policies = [
-        aws_iam_policy.lambda_invoke.arn
-      ]
+
     }
   }
 
