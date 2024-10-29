@@ -42,6 +42,9 @@ module "eks" {
         aws_security_group.node_group_one.id
       ]
 
+      iam_role_additional_policies = { 
+        "lamba" = aws_iam_policy.lambda_invoke.arn 
+      }
     }
   }
 
