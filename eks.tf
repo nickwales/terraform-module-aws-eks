@@ -39,6 +39,9 @@ module "eks" {
       vpc_security_group_ids = [
         aws_security_group.node_group_one.id
       ]
+      iam_role_additional_policies = [
+        aws_iam_role_policy.lambda_invoke.arn
+      ]
     }
   }
 
