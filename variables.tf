@@ -47,3 +47,11 @@ variable "eks_version" {
 variable "create_kms_key" {
   default = true
 }
+
+# variable "kms_key_aliases" {
+#   default = 
+# }
+
+variable "iam_assumable_role_with_oidc_version" {
+  default = "5.54.0"
+}

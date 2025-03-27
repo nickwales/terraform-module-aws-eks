@@ -12,6 +12,8 @@ module "eks" {
   subnet_ids = var.private_subnets
 
   create_kms_key = var.create_kms_key
+  # kms_key_aliases = var.kms_key_aliases
+  
 
   iam_role_additional_policies = { 
     "lamba" = aws_iam_policy.lambda_invoke.arn 
@@ -85,7 +87,7 @@ data "aws_iam_policy" "ebs_csi_policy" {
 
 module "irsa-ebs-csi" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc"
-  version = "4.7.0"
+  version = var.iam_assumable_role_with_oidc_version
 
   create_role                   = true
   role_name                     = "AmazonEKSAddOnsRole-${module.eks.cluster_name}"
