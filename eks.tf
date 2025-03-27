@@ -87,7 +87,7 @@ data "aws_iam_policy" "ebs_csi_policy" {
 
 module "irsa-ebs-csi" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc"
-  version = var.iam_assumable_role_with_oidc_version
+  version = "5.54.0"
 
   create_role                   = true
   role_name                     = "AmazonEKSAddOnsRole-${module.eks.cluster_name}"
