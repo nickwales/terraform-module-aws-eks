@@ -43,3 +43,7 @@ variable "cluster_endpoint_public_access" {
 variable "eks_version" {
   default = "1.31"
 }
+
+variable "create_kms_key" {
+  default = true
+}

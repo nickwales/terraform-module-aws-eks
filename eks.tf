@@ -11,6 +11,8 @@ module "eks" {
   vpc_id     = var.vpc_id
   subnet_ids = var.private_subnets
 
+  create_kms_key = var.create_kms_key
+
   iam_role_additional_policies = { 
     "lamba" = aws_iam_policy.lambda_invoke.arn 
   }
