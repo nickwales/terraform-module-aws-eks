@@ -3,7 +3,7 @@ module "eks" {
   version = "19.15.3"
 
   cluster_name    = var.name
-  cluster_version = "1.24"
+  cluster_version = var.eks_version
 
   cluster_endpoint_public_access  = var.cluster_endpoint_public_access
   cluster_endpoint_private_access = var.cluster_endpoint_private_access

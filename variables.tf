@@ -39,3 +39,7 @@ variable "cluster_endpoint_private_access" {
 variable "cluster_endpoint_public_access" {
   default = true
 }
+
+variable "eks_version" {
+  default = "1.31"
+}
