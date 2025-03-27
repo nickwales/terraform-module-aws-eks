@@ -55,3 +55,8 @@ variable "create_kms_key" {
 variable "iam_assumable_role_with_oidc_version" {
   default = "5.54.0"
 }
+
+variable "ebs_csi_addon_version" {
+  # default = "v1.16.0-eksbuild.1"
+  default = "v1.29.1-eksbuild.1"
+}
