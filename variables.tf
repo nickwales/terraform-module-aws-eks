@@ -41,7 +41,7 @@ variable "cluster_endpoint_public_access" {
 }
 
 variable "eks_version" {
-  default = "1.31"
+  default = "1.30"
 }
 
 variable "create_kms_key" {
@@ -58,5 +58,7 @@ variable "iam_assumable_role_with_oidc_version" {
 
 variable "ebs_csi_addon_version" {
   # default = "v1.16.0-eksbuild.1"
-  default = "v1.29.1-eksbuild.1"
+  default = "v1.42.0-eksbuild.1"
 }
+
+variable "aws_caller_identity" {}

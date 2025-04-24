@@ -28,13 +28,13 @@ output "cluster_certificate_authority_data" {
   value       = module.eks.cluster_certificate_authority_data
 }
 
-output "kubernetes_service_account" {
-  value = kubernetes_service_account.service-account.id
-}
+# output "kubernetes_service_account" {
+#   value = kubernetes_service_account.service-account.id
+# }
 
 output "cluster_name" {
   value = module.eks.cluster_name
 }
-output "lb_role" {
-  value = module.lb_role.iam_role_arn
-}
+# output "lb_role" {
+#   value = module.lb_role.iam_role_arn
+# }
